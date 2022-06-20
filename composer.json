@@ -32,7 +32,7 @@
 
     "psr-4": {
 
-      "tlanyan\\": "src/"
+      "ldg\\": "src/"
 
     }
 
