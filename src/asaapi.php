@@ -19,8 +19,8 @@ $url = 'https://api.searchads.apple.com/api/v4/campaigns';
 $cam = $asa->_geturl($url);
 var_dump($cam);
 *
-* */
-
+* */ 
+ 
 namespace ldg;
 
 class asaapi {
