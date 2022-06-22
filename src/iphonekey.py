@@ -36,7 +36,7 @@ payload['exp'] = expiration_timestamp
 payload['iss'] = team_id
 
 # Path to signed private key.
-KEY_FILE = '/home/wwwroot/asa/public/uploads/route/'+route
+KEY_FILE = route
 
 with open(KEY_FILE,'r') as key_file:
      key = ''.join(key_file.readlines())

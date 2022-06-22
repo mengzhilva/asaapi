@@ -4,6 +4,23 @@
  * Created by haoxin
  * Date: 2021/8/14
  */
+
+
+/*
+ * 使用方法
+$orgid = '';
+$client_id = '';
+$team_id = '';
+$key_id = '';	
+$keypem = ''; 私钥
+$asa = new asaapi($orgid, $client_id, $team_id, $key_id, $keypem);
+
+$url = 'https://api.searchads.apple.com/api/v4/campaigns';
+$cam = $asa->_geturl($url);
+var_dump($cam);
+*
+* */
+
 namespace ldg;
 
 class asaapi {
@@ -12,18 +29,24 @@ class asaapi {
    	private $team_id = '';
     private $key_id = '';
     private $route = '';
-    private $iphonekeypath = './iphonekey.py';
+    private $iphonekeypath = '/iphonekey.py';
 
-    public function __construct()
+    public function __construct($orgid, $client_id, $team_id, $key_id, $keypem)
     {
+    	
+    	$this->orgid = $orgid;
+    	$this->client_id = $client_id;
+    	$this->team_id = $team_id;
+    	$this->key_id = $key_id;
+    	$p = dirname(__FILE__);
+    	
+    	$path = $p.'/private-key.pem';
+		file_put_contents($path,$keypem);
+    	$this->route = $path;
+    	
+    	$this->iphonekeypath = $p.$this->iphonekeypath;
     }
-    /*
-     * 使用方法
-		$asaapi = new asaapi();
-		$url = 'https://api.searchads.apple.com/api/v4/campaigns';
-		$cam = $asaapi->_geturl($url);
-     * 
-     * */
+		
 
     public function _geturl($url){
     	$UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 3.0.04506; .NET CLR 3.5.21022; .NET CLR 1.0.3705; .NET CLR 1.1.4322)";
