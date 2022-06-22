@@ -1,5 +1,5 @@
 # asaapi
-苹果asa归因，php版接口
+苹果asa数据报告获取apple_search_ads，php版接口
 
 苹果文档地址：https://developer.apple.com/documentation/apple_search_ads/implementing_oauth_for_the_apple_search_ads_api
 
