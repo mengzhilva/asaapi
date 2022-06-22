@@ -78,7 +78,7 @@ class asaapi {
     	}
     }
     
-    public function _posturl($url,$jsonstr,$uuid=''){
+    public function _posturl($url,$jsonstr){
     	$UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 3.0.04506; .NET CLR 3.5.21022; .NET CLR 1.0.3705; .NET CLR 1.1.4322)";
     
     	$access_token=$this->lingpai();
@@ -107,7 +107,7 @@ class asaapi {
     	}
     }
     
-    public function _puturl($url,$jsonstr,$uuid=''){
+    public function _puturl($url,$jsonstr){
     	$UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 3.0.04506; .NET CLR 3.5.21022; .NET CLR 1.0.3705; .NET CLR 1.1.4322)";
     
     	
@@ -134,7 +134,7 @@ class asaapi {
     	}
     }
     
-    public function _deleteurl($url,$uuid=''){
+    public function _deleteurl($url){
     	$UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 3.0.04506; .NET CLR 3.5.21022; .NET CLR 1.0.3705; .NET CLR 1.1.4322)";
     
     	$access_token=$this->lingpai();
