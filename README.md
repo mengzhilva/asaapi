@@ -5,7 +5,12 @@ composer快速安装：
 
 composer require ldg/asaapi
 
-
+内置请求方法：
+GET: _geturl    获取数据
+POST:_posturl   提交数据
+PUT:_puturl     修改数据
+DELETE:_deleteurl 删除数据
+（传入参数请用数组json_encode）
 苹果文档地址：https://developer.apple.com/documentation/apple_search_ads/
 
 使用方法
